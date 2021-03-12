@@ -1,5 +1,8 @@
-/* Objective: Consume the good green foods to grow whil avoiding colliding with the red food, the walls, or your own tail!
+/* 
+Objective: Consume the good green foods to grow whil avoiding colliding with the red food, the walls, or your own tail!
 
+Main Edits: Made different food classes instead of just functions and added interaction with the collison between foods and the snake. 
+Also added spacing functionallity between the foods. 
 */
 // Notes: Try to put if so that poison does not spawn in a ceratin radius of the snake head just like with the good food. 
 
