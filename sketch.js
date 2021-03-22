@@ -64,7 +64,7 @@ function draw() {
 
 // Print end game if player dies 
   if (snake.endGame()) {
-    print("YOU LOSE");
+    print("YOU DIED");
     background(255, 0, 0);
     noLoop();
   }
