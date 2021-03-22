@@ -1,11 +1,8 @@
-/* 
-Objective: Consume the good green foods to grow whil avoiding colliding with the red food, the walls, or your own tail!
+/* Objective: Consume the good green foods to grow whil avoiding colliding with the red food, the walls, or your own tail!
 
-Main Edits: Made different food classes instead of just functions and added interaction with the collison between foods and the snake. 
-Also added spacing functionallity between the foods. 
+Main Edits: Made different food classes instead of just functions and added interaction with the collison between foods and the snake. Also added spacing functionallity between the foods. 
 */
-// Notes: Try to put if so that poison does not spawn in a ceratin radius of the snake head just like with the good food. 
-
+// Notes: Trying to put if so that poison does not spawn in a ceratin radius of the snake head just like with the good food. Make good ending?
 //declare variables
 let snake;
 let rez = 20;
@@ -26,7 +23,7 @@ function setup() {
   poison.location();
 }
 
-// declare user incput controls 
+//user input controls 
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
     snake.setDir(-1, 0);
@@ -39,7 +36,6 @@ function keyPressed() {
   } else if (key == ' ') {
     snake.grow();
   }
-
 }
 // draw the screen and call to functions that need to be ran and printed
 function draw() {
@@ -55,7 +51,7 @@ function draw() {
     }
 }
   if (snake.eat(badFood)) {
-    print("YOU LOSE");
+    print("YOU DIED");
     background(255, 0, 0);
     noLoop();
   }
@@ -64,7 +60,7 @@ function draw() {
 
 // Print end game if player dies 
   if (snake.endGame()) {
-    print("YOU DIED");
+    print("YOU LOSE");
     background(255, 0, 0);
     noLoop();
   }
