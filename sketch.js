@@ -1,4 +1,4 @@
-//Saugat Shrestha
+/Saugat Shrestha
 //Coding Train Challenge
 //snake game with controls that get inverted every time you eat
 
@@ -7,6 +7,7 @@ let rez = 20;
 let food;
 let w;
 let h;
+let eaten=0; 
 let inverted = false; //creative refactoring
 
 function setup() {
@@ -70,9 +71,10 @@ function keyPressed() {
 
 function draw() {
   scale(rez);
-  background(220);
+  background(125,232,120);
   if (snake.eat(food)) {
     foodLocation();
+    eaten++;
     if(inverted===false){   //creative refactoring
       inverted = true;
     }
@@ -86,6 +88,7 @@ function draw() {
 
   if (snake.endGame()) {
     print("END GAME");
+    print("You ate " + eaten + " pieces");
     background(255, 0, 0);
     noLoop();
   }
